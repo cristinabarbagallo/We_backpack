@@ -15,7 +15,15 @@
         height: 5px;
         background-color: #333;
         margin: 5px 0;
+        border-radius: 2px;
         @include easeOut;
+
+        @include tablet {
+            width: 50px;
+            height: 8px;
+            margin: 8px 0;
+            border-radius: 2px;
+        }
     }
 
     //Rotate Into X 
@@ -26,8 +34,13 @@
 
             //line 1 - Rotate
             &:nth-child(1) {
-                -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-                transform: rotate(-45deg) translate(-8px, 6px);
+                -webkit-transform: rotate(-45deg) translate(-8px, 5px);
+                transform: rotate(-45deg) translate(-8px, 5px);
+
+                @include tablet {
+                    -webkit-transform: rotate(-45deg) translate(-15px, 15px);
+                    transform: rotate(-45deg) translate(-15px, 15px);
+                }
             }
 
             //Line 2 - Hide
@@ -37,7 +50,7 @@
 
             //Line 3 - Rotate
             &:nth-child(3) {
-                -webkit-transform: rotate(45deg) translate(-8px, -8px);
+                -webkit-transform: rotate(45deg) translate(-9px, -7px);
                 transform: rotate(45deg) translate(-9px, -7px);
             }
         }
@@ -56,6 +69,10 @@
     height: 100vh;
     transform: translate3d(-100%, 0, 0);
     @include easeOut;
+
+    @include tablet{
+        width: 40%;
+    }
 
     &.show {
         visibility: visible;
