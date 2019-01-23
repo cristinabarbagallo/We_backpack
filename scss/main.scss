@@ -3,6 +3,7 @@
 @import "header";
 @import "parallax";
 @import "footer";
+@import "mixins";
 
 
 * {
@@ -40,6 +41,7 @@ h3 {
         margin-left: 4rem;
         margin-right: 5rem;
         border-bottom: $secondaryBlue solid 3px;
+        
     }
 
     &.sm-heading {
@@ -102,8 +104,12 @@ main {
         width: 100%;
         object-fit: cover;
         opacity: 0.6;
-        filter: alpha(opacity=60);
-        /* For IE8 and earlier */
+        filter: alpha(opacity=60);/* For IE8 and earlier */
+
+        @include tablet {
+            height: 100vh;
+            width: 100%;
+        }
 
         img {
             height: 100%;
@@ -145,6 +151,10 @@ main {
         animation: bounce 2s infinite 2s;
         -webkit-transition: all .2s ease-in;
         transition: all .2s ease-in;
+
+        @include tablet {
+            font-size: 80px;
+        }
 
         i {
             color: $primary;
