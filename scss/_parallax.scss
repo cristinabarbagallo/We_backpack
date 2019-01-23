@@ -30,12 +30,19 @@
     .overlay-title {
         font-family: $fontTitle;
         font-size: 20px;
-        float: right;
-        text-align: right;
-        margin-right: 3rem;
         margin-bottom: 5rem;
+        margin-right: 2rem;
         height: auto;
-        max-width: 70%;
+        width: 50%;
+        text-align: right;
+        float: right;
+
+        @mixin tablet {
+            text-align: right;
+            font-size: 30px;
+            margin-bottom: 3rem;
+
+        }
     }
 
     .text {
@@ -45,6 +52,15 @@
         display: block;
         background-color: #fff;
 
+        p {
+            font-size: inherit;
+
+            @mixin tablet {
+                margin: 0 6rem;
+                font-size: 2em;
+                line-height: 1.8rem;
+            }
+        }
     }
 
 }
@@ -91,7 +107,7 @@
 
     .description-block {
         padding-bottom: 20px;
-        }
+    }
 
 
     .vertical-heading {
@@ -116,7 +132,7 @@
     img {
         height: auto;
         max-width: 100%;
-        
+
     }
 }
 
@@ -138,15 +154,16 @@
     font-family: $fontTitle;
     padding: 20px 0 10px 0;
 }
+
 form {
     display: block;
     text-align: center;
 
-    label  {
+    label {
         float: left;
         margin-top: 0.8rem;
     }
-    
+
     input[type="submit"] {
         background-color: $primary;
         color: #fff;
@@ -154,7 +171,7 @@ form {
         margin-top: 0.5rem;
         padding: 3px 25px;
     }
-    
+
 }
 
 
