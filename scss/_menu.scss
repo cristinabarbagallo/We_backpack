@@ -1,0 +1,65 @@
+@import "mixins";
+
+//Menu Button
+.menu-btn {
+    position: absolute;
+    display: inline-block;
+    cursor: pointer;
+    z-index: 1000;
+    top: 35px;
+    left: 35px;
+
+
+    .btn-line {
+        width: 35px;
+        height: 5px;
+        background-color: #333;
+        margin: 5px 0;
+        @include easeOut;
+    }
+
+    //Rotate Into X 
+    &.close {
+        transform: rotate(180deg);
+
+        .btn-line {
+
+            //line 1 - Rotate
+            &:nth-child(1) {
+                -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+                transform: rotate(-45deg) translate(-8px, 6px);
+            }
+
+            //Line 2 - Hide
+            &:nth-child(2) {
+                opacity: 0;
+            }
+
+            //Line 3 - Rotate
+            &:nth-child(3) {
+                -webkit-transform: rotate(45deg) translate(-8px, -8px);
+                transform: rotate(45deg) translate(-9px, -7px);
+            }
+        }
+    }
+}
+
+//Menu Overlay
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    visibility: hidden;
+    background: #fff;
+    height: 100vh;
+    transform: translate3d(-100%, 0, 0);
+    @include easeOut;
+
+    &.show {
+        visibility: visible;
+        transform: translate3d(0, 0, 0);
+    }
+
+}

@@ -1,0 +1,174 @@
+.parallax-img-1,
+.parallax-img-2,
+.parallax-img-3,
+.parallax-img-4,
+.parallax-img-5 {
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+
+}
+
+.parallax-img-1 {
+    background-image: url('../img/bakgrund_undersida1.jpg');
+    height: 100vh;
+
+
+    .top-image {
+        margin-top: 2rem;
+        object-fit: cover;
+
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    .overlay-title {
+        font-family: $fontTitle;
+        font-size: 20px;
+        float: right;
+        text-align: right;
+        margin-right: 3rem;
+        margin-bottom: 5rem;
+        height: auto;
+        max-width: 70%;
+    }
+
+    .text {
+        margin: 0;
+        padding: 1.5rem 5rem;
+        line-height: 1.2rem;
+        display: block;
+        background-color: #fff;
+
+    }
+
+}
+
+.parallax-img-2 {
+    background-image: url('../img/bakgrund_undersida2.jpg');
+    min-height: 200px;
+
+}
+
+.parallax-img-3 {
+    background-image: url('../img/bakgrund_undersida2.jpg');
+    min-height: 200px;
+}
+
+.parallax-img-4 {
+    background-image: url('../img/bakgrund_undersida2.jpg');
+    min-height: 300px;
+
+    .parallax-link {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        text-align: center;
+        font-size: 20px;
+        cursor: pointer;
+
+        a {
+            color: #252525;
+            border-bottom: 1px solid #252525;
+        }
+    }
+}
+
+.text-block {
+    padding: 1.5rem 5rem;
+    line-height: 1.2rem;
+    z-index: 1;
+    padding-bottom: 0;
+
+    p {
+        margin-bottom: 0;
+    }
+
+    .description-block {
+        padding-bottom: 20px;
+        }
+
+
+    .vertical-heading {
+        transform: rotate(-90deg);
+        transform-origin: left bottom 0;
+        font-size: 25px;
+        z-index: 2;
+        margin-left: -2.5rem;
+        text-align: center;
+    }
+}
+
+.bottom-image {
+    position: relative;
+    min-width: 100px;
+    z-index: 1;
+    top: 60px;
+    margin-left: 70px;
+    margin-right: 20px;
+    object-fit: cover;
+
+    img {
+        height: auto;
+        max-width: 100%;
+        
+    }
+}
+
+.divider {
+    height: 150px;
+    width: 100%;
+    background-color: $secondaryBeige;
+}
+
+.parallax-img-5 {
+    background-image: url('../img/bakgrund_undersida_4.jpg');
+    min-height: 200px;
+    object-fit: cover;
+    margin-top: 4rem;
+}
+
+.contact-title {
+    font-size: 30px;
+    font-family: $fontTitle;
+    padding: 20px 0 10px 0;
+}
+form {
+    display: block;
+    text-align: center;
+
+    label  {
+        float: left;
+        margin-top: 0.8rem;
+    }
+    
+    input[type="submit"] {
+        background-color: $primary;
+        color: #fff;
+        border-radius: 20px;
+        margin-top: 0.5rem;
+        padding: 3px 25px;
+    }
+    
+}
+
+
+
+
+
+// .section {
+//     text-align: center;
+//     padding: 50px 0;
+
+//     &.section-one {
+//         z-index: 2;
+//         position: relative;
+//         padding-bottom: 50px;
+
+//     }
+// }
