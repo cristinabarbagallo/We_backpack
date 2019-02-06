@@ -45,20 +45,23 @@
         }
     }
 
-    .text {
-        margin: 0;
-        padding: 1.5rem 5rem;
-        line-height: 1.2rem;
-        display: block;
+    .parallax-overlay-text {
         background-color: #fff;
+        padding: 1.5rem 5rem;
+        margin: 0;
 
-        p {
-            font-size: inherit;
+        @include tablet {
+            padding: 2.5rem 5rem;
+            margin-bottom: 2rem;
+        }
 
-            @mixin tablet {
+        .text {
+
+            @include tablet {
                 margin: 0 6rem;
-                font-size: 2em;
+                font-size: 1.3em;
                 line-height: 1.8rem;
+        
             }
         }
     }
