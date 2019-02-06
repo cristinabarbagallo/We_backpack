@@ -18,6 +18,7 @@ html {
 body,
 html {
     margin: 0;
+    padding: 0;
     height: 100%;
     font-family: $fontBody;
     color: #252525;
@@ -64,7 +65,7 @@ h3 {
         z-index: 1;
 
         @include tablet {
-            font-size: 30px;
+            font-size: 35px;
         }
 
         &.two {
@@ -74,6 +75,7 @@ h3 {
             @include tablet {
                 font-size: 30px;
                 margin-left: 4rem;
+                font-size: 35px;
             }
             
         }
