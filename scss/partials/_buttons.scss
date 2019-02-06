@@ -1,0 +1,20 @@
+// Go Back to Top Button
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 70px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: $primary;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px 13px;
+    border-radius: 2px;
+    font-size: 1rem;
+}
+
+.fa-long-arrow-alt-up {
+    padding-left: 5px;
+}

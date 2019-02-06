@@ -30,21 +30,40 @@
     .overlay-title {
         font-family: $fontTitle;
         font-size: 20px;
-        float: right;
-        text-align: right;
-        margin-right: 3rem;
         margin-bottom: 5rem;
+        margin-right: 2rem;
         height: auto;
-        max-width: 70%;
+        width: 50%;
+        text-align: right;
+        float: right;
+
+        @mixin tablet {
+            text-align: right;
+            font-size: 30px;
+            margin-bottom: 3rem;
+
+        }
     }
 
-    .text {
-        margin: 0;
-        padding: 1.5rem 5rem;
-        line-height: 1.2rem;
-        display: block;
+    .parallax-overlay-text {
         background-color: #fff;
+        padding: 1.5rem 5rem;
+        margin: 0;
 
+        @include tablet {
+            padding: 2.5rem 3rem;
+            margin-bottom: -4rem;
+        }
+
+        .text {
+
+            @include tablet {
+                margin: 0 6rem;
+                font-size: 1.3em;
+                line-height: 1.8rem;
+
+            }
+        }
     }
 
 }
@@ -79,44 +98,97 @@
     }
 }
 
-.text-block {
-    padding: 1.5rem 5rem;
-    line-height: 1.2rem;
-    z-index: 1;
-    padding-bottom: 0;
+.container-fluid {
 
-    p {
-        margin-bottom: 0;
-    }
+    &.text-block {
+        padding: 1.5rem 5rem 0 5rem;
+        line-height: 1.2rem;
+        z-index: 1;
 
-    .description-block {
-        padding-bottom: 20px;
+
+
+        .text-block-title {
+            font-family: $fontTitle;
+            font-size: 20px;
+            margin-bottom: 15px;
+            line-height: 1.8;
+
+            &.contact {
+                font-size: 35px;
+            }
+
+            @include tablet {
+                padding: 0.5rem 3rem 0 3rem;
+                font-size: 1.5rem;
+            }
         }
 
+        .text-block-description {
+            line-height: 1.5rem;
+            margin-bottom: 0;
 
-    .vertical-heading {
-        transform: rotate(-90deg);
-        transform-origin: left bottom 0;
-        font-size: 25px;
-        z-index: 2;
-        margin-left: -2.5rem;
-        text-align: center;
+            @include tablet {
+                padding: 2.5rem 3rem;
+                font-size: 1.3em;
+                line-height: 1.8rem;
+            }
+        }
+
+        .vertical-heading-text-block {
+            transform: rotate(-90deg);
+            transform-origin: left bottom 0;
+            font-size: 30px;
+            z-index: 2;
+            margin-left: -2rem;
+            text-align: center;
+            position: absolute;
+            margin-top: 5rem;
+
+            @include tablet {
+                font-size: 35px;
+                margin-left: -1rem;
+            }
+
+        }
     }
 }
 
-.bottom-image {
+.vertical-heading {
+    transform: rotate(-90deg);
+    transform-origin: left bottom 0;
+    font-size: 30px;
+    z-index: 2;
+    margin-left: -2rem;
+    text-align: center;
+
+    @include tablet {
+        position: absolute;
+        margin-left: 3.5rem;
+        font-size: 35px;
+        margin-bottom: 3em;
+        margin-left: -1rem;
+
+    }
+}
+
+.text-block-image {
     position: relative;
     min-width: 100px;
     z-index: 1;
-    top: 60px;
-    margin-left: 70px;
-    margin-right: 20px;
+    top: 80px;
+    margin-left: 5rem;
+    margin-right: 1.2rem;
+    margin-top: -3rem;
     object-fit: cover;
+
+    // @include tablet {
+    //     margin
+    // }
 
     img {
         height: auto;
         max-width: 100%;
-        
+
     }
 }
 
@@ -138,15 +210,21 @@
     font-family: $fontTitle;
     padding: 20px 0 10px 0;
 }
+
 form {
     display: block;
     text-align: center;
+    
+    @include tablet {
+        padding: 2.5rem 3rem;
+    }
 
-    label  {
+    label {
         float: left;
         margin-top: 0.8rem;
+        font-size: 22px;
     }
-    
+
     input[type="submit"] {
         background-color: $primary;
         color: #fff;
@@ -154,7 +232,7 @@ form {
         margin-top: 0.5rem;
         padding: 3px 25px;
     }
-    
+
 }
 
 
