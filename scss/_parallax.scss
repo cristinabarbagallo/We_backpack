@@ -28,44 +28,55 @@
         @include tablet {
             font-size: 30px;
             margin-left: 4rem;
-            font-size: 35px;
+        }
+
+        @include desktop-small {
+            font-size: 40px;
+            margin-left: 4.5rem;
+            margin-top: 20rem;
         }
 
     }
 
-    .container-fluid {
-
-
+    .container-fluid.section-one {
+        
         @include desktop-small {
-            border: 25px solid $secondaryBlue;
-            border-radius: 5px;
-            position: absolute;
-            margin: -70% 10%;
-            background: #fff;
-            width: 800px;
-            height: 500px;
-            padding: 20px;
+            display: flex;
         }
 
 
         .top-image {
+            display: flex;
+            flex-direction: column;
             object-fit: cover;
+            height: 300px;
 
             img {
                 height: 100%;
                 width: 100%;
+            }
+
+        
+    
+            #map-img {order: 1;}
+            #map-title {order: 2;}
+
+            @include desktop-small {
+                height: 350px;
+
+                #map-img {order: 2;}
+                #map-title {order: 1;}
             }
         }
 
         .overlay-title {
             font-family: $fontTitle;
             font-size: 20px;
-            margin-bottom: 4rem;
-            margin-right: 2rem;
+            margin-left: 8rem;
             height: auto;
             width: 50%;
             text-align: right;
-            float: right;
+            
 
             @include tablet {
                 text-align: right;
@@ -73,16 +84,31 @@
                 margin-bottom: 1.5rem;
 
             }
+
+            @include desktop-small {
+                float: right;
+                margin-top: 8em;
+                font-size: 30px;
+            }
         }
 
         .parallax-overlay-text {
             background-color: #fff;
-            padding: 1rem 5rem;
-            margin: 0;
+            padding: 1rem 2.5rem;
+            margin-top: 130px;
 
             @include tablet {
                 padding: 0.5rem 0;
                 margin-bottom: -4rem;
+            }
+
+            @include desktop-small {
+                display: flex;
+                flex-direction: column;
+                align-self: flex-end;
+                border-radius: 10px;
+                margin-top: 12em;
+                padding: 1rem 2rem;
             }
 
             .text {
@@ -95,16 +121,15 @@
                     margin: 0 6rem;
                     font-size: 1.3em;
                     line-height: 1.8rem;
+                }
 
+                @include desktop-small {
+                    font-size: 1.5em;
                 }
             }
         }
 
-
-
     }
-
-
 
 
 }
@@ -163,6 +188,14 @@
                 padding: 0.5em 2em 0 7em;
                 font-size: 1.5rem;
             }
+
+            @include desktop-small {
+                font-size: 2rem;
+                width: 600px;
+                margin: auto;
+                padding-top: 1.5rem;
+
+            }
         }
 
         .text-block-description {
@@ -174,6 +207,12 @@
                 padding: 0.5em 2em 0 8em;
                 font-size: 1.3em;
                 line-height: 1.8rem;
+            }
+
+            @include desktop-small {
+                width: 600px;
+                margin: auto;
+                font-size: 1.2rem;
             }
         }
 
@@ -193,6 +232,13 @@
                 margin-top: 9rem;
             }
 
+            @include desktop-small {
+                font-size: 40px;
+                margin-left: 4.5rem;
+                margin-top: 9rem;
+            }
+            
+
         }
     }
 }
@@ -207,16 +253,22 @@
     margin-top: -3rem;
     object-fit: cover;
 
+    img {
+        height: auto;
+        max-width: 100%;
+
+    }
+
     @include tablet {
         max-width: 500px;
         margin-left: 10em;
         margin-right: 0;
     }
 
-    img {
-        height: auto;
-        max-width: 100%;
-
+    @include desktop-small {
+        max-width: 500px;
+        margin: auto;
+        margin-top: -4rem;
     }
 }
 
@@ -234,24 +286,35 @@
         height: 150px;
         width: 100%;
         background-color: $secondaryBeige;
+
+        @include desktop-small {
+            display: none;
+        }
     }
 
-    .text-block-title {
-
-        &.contact {
+    .text-block-title-contact {
             margin: 0;
-            font-size: 30px;
+            font-size: 35px;
             font-family: $fontTitle;
             color: $primary;
             padding-top: 3rem;
+            text-align: center;
 
             @include tablet {
-                padding-left: 5em;
+                margin: auto;
+            }
+
+            @include desktop-small {
+                background-color: $secondaryBeige;
+                width: 100%;
+                text-align: center;
+                font-size: 50px;
+                padding-bottom: 1rem;
+                padding-top: 2em;
             }
 
         }
 
-    }
 
     .vertical-heading-contact {
         transform: rotate(-90deg);
@@ -271,6 +334,31 @@
             margin-left: 5rem;
 
         }
+
+        @include desktop-small {
+            font-size: 40px;
+            margin-left: 4.5rem;
+            margin-top: 9rem;
+        }
+    }
+
+    .text-block-description.contact {
+        margin-top: 2em;
+        margin-left: 2rem;
+        padding: 1rem 3em;
+
+        @include tablet {
+            padding: 1rem 3.5rem;
+        }
+
+        @include desktop-small  {
+            padding: 1rem 4rem;
+            margin-top: 4em;
+        }
+
+        .capital-letter {
+            font-size: 30px;
+        }
     }
 
     form {
@@ -280,6 +368,10 @@
 
         @include tablet {
             padding: 2.5rem 5rem;
+        }
+
+        @include desktop-small {
+            margin-top: 3em;
         }
 
         label {

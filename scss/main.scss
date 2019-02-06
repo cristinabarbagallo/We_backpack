@@ -20,6 +20,7 @@ html {
     margin: 0;
     padding: 0;
     height: 100%;
+    width: 100%;
     font-family: $fontBody;
     color: #252525;
 }
@@ -28,8 +29,14 @@ a {
     text-decoration: none;
 }
 
-.container-fluid {
+.container-fluid,
+.row {
     padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3 {
+    color: $primary;
 }
 
 main {
@@ -52,6 +59,20 @@ main {
         img {
             height: 100%;
             width: 100%;
+        }
+    }
+
+    #desktop-card {
+
+        @include desktop-small {
+            border: 25px solid $secondaryBlue;
+            border-radius: 5px;
+            position: absolute;
+            margin: -70% 10%;
+            background: #fff;
+            width: 800px;
+            height: 500px;
+            padding: 20px;
         }
     }
 
