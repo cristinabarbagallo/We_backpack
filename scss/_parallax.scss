@@ -36,6 +36,33 @@
             margin-top: 20rem;
         }
 
+        @include desktop-large {
+            font-size: 45px;
+            margin-left: 4.5rem;
+            
+        }
+
+    }
+
+    .page-number {
+        display: none;
+
+        @include tablet {
+            display: none;
+        }
+
+        @include desktop-small {
+            display: none;
+        }
+
+        @include desktop-large {
+            display: inline-block;
+            font-family: $fontTitle;
+            font-size: 12em;
+            color: $secondaryBlue;
+            margin-left: 6.5rem;
+            margin-top: 1.5em;
+        }
     }
 
     .container-fluid.section-one {
@@ -57,12 +84,19 @@
             }
 
         
-    
             #map-img {order: 1;}
             #map-title {order: 2;}
 
             @include desktop-small {
                 height: 350px;
+
+                #map-img {order: 2;}
+                #map-title {order: 1;}
+            }
+
+            @include desktop-large {
+                margin-top: 15%;
+                height: 500px;
 
                 #map-img {order: 2;}
                 #map-title {order: 1;}
@@ -82,7 +116,6 @@
                 text-align: right;
                 font-size: 25px;
                 margin-bottom: 1.5rem;
-
             }
 
             @include desktop-small {
@@ -90,7 +123,24 @@
                 margin-top: 8em;
                 font-size: 30px;
             }
+
+            @include desktop-large {
+                font-size: 40px;
+            }
         }
+
+
+        #fadeIn {
+            display: block;
+            opacity: 0;
+            
+
+            &.active {
+                opacity: 1;
+                transition-duration: 2000ms;
+            }
+        }
+        
 
         .parallax-overlay-text {
             background-color: #fff;
@@ -112,8 +162,14 @@
                 padding: 1rem 2rem;
             }
 
-            .text {
+            @include desktop-large {
+                border-top-left-radius: 15px;
+                border-bottom-left-radius: 15px;
+                margin-top: 15%;
+            }
 
+            .text {
+                
                 .capital-letter {
                     font-size: 30px;
                 }
@@ -127,7 +183,12 @@
                 @include desktop-small {
                     font-size: 1.3em;
                 }
+
+                @include desktop-large {
+                    font-size: 1.5em;
+                }
             }
+
         }
 
     }
@@ -144,6 +205,10 @@
 .parallax-img-3 {
     background-image: url('../img/bakgrund_undersida2.jpg');
     min-height: 200px;
+
+    @include desktop-large {
+        margin-bottom: 4rem;
+    }
 }
 
 .parallax-img-4 {
@@ -157,10 +222,17 @@
         text-align: center;
         font-size: 20px;
         cursor: pointer;
+        color: $primary;
 
         a {
             color: #252525;
-            border-bottom: 1px solid #252525;
+            text-decoration: underline;
+        }
+
+        @include desktop-large {
+            font-size: 2.5em;
+            font-weight: bold;
+            
         }
     }
 }
@@ -171,7 +243,6 @@
     &.text-block {
         line-height: 1.2rem;
         z-index: 1;
-
 
         .text-block-title {
             padding: 0 5rem;
@@ -195,7 +266,13 @@
                 width: 600px;
                 margin: auto;
                 padding-top: 1.5rem;
+            }
 
+            @include desktop-large  {
+                font-size: 3rem;
+                width: 800px;
+                margin: auto;
+                line-height: 1.5;
             }
         }
 
@@ -214,6 +291,13 @@
                 width: 600px;
                 margin: auto;
                 font-size: 1.2rem;
+            }
+
+            @include desktop-large  {
+                font-size: 1.5rem;
+                width: 800px;
+                margin: auto;
+                line-height: 2rem;
             }
         }
 
@@ -238,8 +322,35 @@
                 margin-left: 4.5rem;
                 margin-top: 9rem;
             }
-            
 
+            @include desktop-large {
+                font-size: 45px;
+                margin-left: 4.5rem;
+                margin-top: 12rem;
+            }
+        }
+
+        .page-number {
+            display: none; 
+    
+            @include tablet {
+                display: none;
+            }
+    
+            @include desktop-small {
+                display: none;
+            }
+    
+            @include desktop-large {
+                display: inline-block;
+                font-family: $fontTitle;
+                font-size: 12em;
+                color: $secondaryBlue;
+                z-index: 2;
+                position: relative;
+                margin-left: 6.5rem;
+                margin-top: 0;
+            }
         }
     }
 }
@@ -257,7 +368,6 @@
     img {
         height: auto;
         max-width: 100%;
-
     }
 
     @include tablet {
@@ -270,6 +380,12 @@
         max-width: 500px;
         margin: auto;
         margin-top: -4rem;
+    }
+
+    @include desktop-large  {
+        max-width: 800px;
+        margin: auto;
+        margin-top: -3em;
     }
 }
 
@@ -291,6 +407,10 @@
         @include desktop-small {
             display: none;
         }
+
+        @include desktop-large {
+            display: none;
+        }
     }
 
     .text-block-title-contact {
@@ -310,6 +430,15 @@
                 width: 100%;
                 text-align: center;
                 font-size: 50px;
+                padding-bottom: 1.5rem;
+                padding-top: 2em;
+            }
+
+            @include desktop-large {
+                background-color: $secondaryBeige;
+                width: 100%;
+                text-align: center;
+                font-size: 4em;
                 padding-bottom: 1.5rem;
                 padding-top: 2em;
             }
@@ -341,6 +470,35 @@
             margin-left: 4.5rem;
             margin-top: 9rem;
         }
+
+        @include desktop-large {
+            font-size: 45px;
+            margin-left: 4.5rem;
+            margin-top: 8rem;
+        }
+    }
+
+    .page-number {
+        display: none; 
+
+        @include tablet {
+            display: none;
+        }
+
+        @include desktop-small {
+            display: none;
+        }
+
+        @include desktop-large {
+            display: inline-block;
+            font-family: $fontTitle;
+            font-size: 12em;
+            color: $secondaryBlue;
+            z-index: 2;
+            position: relative;
+            margin-left: 6.5rem;
+            padding-top: 7rem;
+        }
     }
 
     .text-block-description.contact {
@@ -355,13 +513,22 @@
         @include desktop-small  {
             padding-top: 3.5rem;
             padding-right: 7rem;
-            padding-left: 5rem;
-            
-            
+            padding-left: 5rem; 
+        }
+
+        @include desktop-large {
+            margin: 60px;
+            margin-top: 5em;
+            padding: 0;
+            width: 500px;
         }
 
         .capital-letter {
             font-size: 30px;
+
+            @include desktop-large {
+                font-size: 40px;
+            }
         }
     }
 
@@ -379,11 +546,21 @@
             margin-top: 3em;
         }
 
+        @include desktop-large {
+            margin-top: 3em;
+        } 
+
+
         label {
             float: left;
             margin-top: 0.8rem;
             font-size: 22px;
             text-align: left;
+
+            @include desktop-large {
+                font-size: 28px;
+                margin-top: 2rem;
+            }
         }
 
         input[type="submit"] {
@@ -404,9 +581,16 @@
                 border-radius: 10px;
                 font-size: 18px;
             }
+
+            @include desktop-large {
+                padding: 10px 30px;
+                border-radius: 10px;
+                font-size: 20px;
+            }
            
         }
 
     }
 }
+
 

@@ -42,6 +42,53 @@ h1, h2, h3 {
 main {
     height: 100vh;
 
+    @include desktop-small {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+
+        &::before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-image: url('/img/bakgrund_index.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center; 
+            opacity: 0.6;
+        }
+    }
+
+    @include desktop-large {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+
+        &::before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-image: url('/img/bakgrund_index.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            opacity: 0.6;
+            }
+
+        
+    }
+
     .hero-image {
         height: 40vh;
         width: 100%;
@@ -51,13 +98,13 @@ main {
         /* For IE8 and earlier */
 
         @include desktop-small {
-            height: 100vh;
-            position: relative;
+            // height: 100vh;
+            // position: relative;
+            display: none;
         }
 
         @include desktop-large {
-            height: 100vh;
-            position: relative;
+            display: none;
         }
 
         img {
@@ -71,24 +118,20 @@ main {
         @include desktop-small {
             border: 25px solid $secondaryBlue;
             border-radius: 5px;
-            position: absolute;
-            margin: -70% 10%;
             background: #fff;
             width: 800px;
             height: 500px;
             padding: 20px;
+        
         }
 
         @include desktop-large {
             border: 35px solid $secondaryBlue;
             border-radius: 10px;
-            position: absolute;
-            margin: -50% 15%;
             background: #fff;
             width: 1000px;
             height: 500px;
             padding: 20px;
-            margin-bottom: 30px;
         }
     }
 

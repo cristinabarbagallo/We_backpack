@@ -3,12 +3,20 @@
     color: #fff;
     padding: 15px;
 
+    @include desktop-large { 
+        padding: 25px;
+    }
+
     h4 {
         font-size: 1rem;
         text-align: center;
         margin: auto;
 
         @include desktop-small {
+            font-size: 1.5rem;
+        }
+
+        @include desktop-large {
             font-size: 1.5rem;
         }
     }
