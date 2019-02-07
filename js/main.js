@@ -61,9 +61,66 @@ $(function () {
 
 
 //--- Fade in Text when scrollling down
+$(document).ready(function () {
 
-$(window).scroll(function(){
-  var top = ($(window).scrollTop() > 0) ? $(window).scrollTop() : 1;
-  $('.fade').stop(true, true).fadeTo(0, 1 / top);
-  $('.fade').css('top', top * 1.3);             
+  var $fade = $('#fadeIn');
+
+  $(window).on('scroll', function () {
+
+    if ($(this).scrollTop() > 200) {
+
+      $fade.addClass('active');
+
+    } else {
+
+      $fade.removeClass('active');
+
+    }
+
+  });
+
+});
+
+
+//---- Images Animation
+
+$(function() {
+  var $window           = $(window),
+      win_height_padded = $window.height() * 1.1,
+      isTouch           = Modernizr.touch;
+
+  if (isTouch) { $('.revealOnScroll').addClass('animated'); }
+
+  $window.on('scroll', revealOnScroll);
+
+  function revealOnScroll() {
+    var scrolled = $window.scrollTop(),
+        win_height_padded = $window.height() * 1.1;
+
+    // Showed...
+    $(".revealOnScroll:not(.animated)").each(function () {
+      var $this     = $(this),
+          offsetTop = $this.offset().top;
+
+      if (scrolled + win_height_padded > offsetTop) {
+        if ($this.data('timeout')) {
+          window.setTimeout(function(){
+            $this.addClass('animated ' + $this.data('animation'));
+          }, parseInt($this.data('timeout'),10));
+        } else {
+          $this.addClass('animated ' + $this.data('animation'));
+        }
+      }
+    });
+    // Hidden...
+   $(".revealOnScroll.animated").each(function (index) {
+      var $this     = $(this),
+          offsetTop = $this.offset().top;
+      if (scrolled + win_height_padded < offsetTop) {
+        $(this).removeClass('animated fadeInRight')
+      }
+    });
+  }
+
+  revealOnScroll();
 });

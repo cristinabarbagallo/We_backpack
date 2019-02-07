@@ -129,6 +129,19 @@
             }
         }
 
+
+        #fadeIn {
+            display: block;
+            opacity: 0;
+            
+
+            &.active {
+                opacity: 1;
+                transition-duration: 2000ms;
+            }
+        }
+        
+
         .parallax-overlay-text {
             background-color: #fff;
             padding: 1rem 2.5rem;
@@ -156,7 +169,7 @@
             }
 
             .text {
-
+                
                 .capital-letter {
                     font-size: 30px;
                 }
@@ -175,6 +188,7 @@
                     font-size: 1.5em;
                 }
             }
+
         }
 
     }
@@ -229,7 +243,6 @@
     &.text-block {
         line-height: 1.2rem;
         z-index: 1;
-
 
         .text-block-title {
             padding: 0 5rem;
@@ -579,4 +592,5 @@
 
     }
 }
+
 
