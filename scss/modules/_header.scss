@@ -61,6 +61,14 @@ header {
             margin-top: 20px;
         }
 
+        @include desktop-small {
+            float: none;
+            margin: 10px auto;
+            height: 130px;
+            width: 130px;
+            
+        }
+
         img {
             height: 100%;
             width: 100%;

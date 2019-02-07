@@ -6,13 +6,19 @@
 
 //Media Queries Mixins
 @mixin tablet {
-    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width-S - 1px}) {
       @content;
     }
   }
   
-  @mixin desktop {
-    @media (min-width: #{$desktop-width}) {
+  @mixin desktop-small {
+    @media (min-width: #{$desktop-width-S}) and (max-width: #{$desktop-width-L - 1px}) {
+      @content;
+    }
+  }
+
+  @mixin desktop-large {
+    @media (min-width: #{$desktop-width-L}) {
       @content;
     }
   }

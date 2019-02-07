@@ -58,15 +58,15 @@
     <main role="main">
         <img class="hero-image" src="img/bakgrund_index.jpg" alt="Men sitting on the dock">
 
-        <div class="container">
+        <div class="container" id="desktop-card">
             <h1 class="lg-heading">We Backpack</h1>
-            <h2 class="sm-heading one">We love to travel.</h2>
-            <p class="text"><span class="capital-letter">S</span> orem ipsum dolor, sit amet consectetur adipisicing
+            <h2 class="sm-heading">We love to travel.</h2>
+            <p class="desktop-card-text"><span class="capital-letter">L</span> orem ipsum dolor, sit amet consectetur
+                adipisicing
                 elit. Necessitatibus natus repellat esse totam sunt!
-                Nam
-                doloribus odio, debitis, omnis placeat provident repellendus itaque ad, sunt mollitia repellat
-                voluptatibus
-                optio eveniet. <br /> <br /> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus
+                Nam, omnis placeat provident repellendus itaque ad, sunt mollitia repellat
+                optio eveniet. <br /> <br /> Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Necessitatibus
                 natus repellat esse totam sunt!
                 Nam
                 doloribus odio, debitis, omnis placeat provident repellendus itaque ad, sunt mollitia repellat
@@ -75,38 +75,36 @@
             </p>
         </div>
 
+
         <a href="#" class="scroll-down" address="true"><i class="fas fa-angle-down"></i></a>
 
     </main>
 
 
     <div class="parallax-img-1">
-        <div class="top-image">
-            <img src="img/map.png" alt="World Map">
-        </div>
-        <h2 class="sm-heading two">Start your journey.</h2>
-        <div class="container">
+        <h2 class="sm-heading-two">Start your journey.</h2>
+        <div class="container-fluid section-one">
             <div class="row">
-                <div class="col-sm-6 col-md-12">
-                    <h3 class="overlay-title">Do you want to backpack?</h3>
+                <div class="col-sm-12 col-md-12 col-lg-7 top-image">
+                    <h3 class="overlay-title" id="map-title">Do you want to backpack?</h3>
+                    <img src="img/map.png" alt="World Map" id="map-img">
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-5 parallax-overlay-text">
+                    <p class="text">
+                        <span class="capital-letter">L</span>orem ipsum dolor sit, amet consectetur adipisicing
+                        elit.
+                        Voluptatum consequatur suscipit quos
+                        dignissimos temporibus laudantium laborum saepe.
+                        Repellendus voluptatem, eius rem dolor sint illo quos quam quidem assumenda in? Quia pariatur
+                        et
+                        quae esse dolores voluptates officia in ad eveniet. Ipsum, voluptatum vel! Nihil praesentium
+                        soluta
+                        laudantium modi consequatur dolorem voluptate recusandae temporibus dignissimos labore!
+                    </p>
                 </div>
             </div>
         </div>
-        <div class="container-fluid">
-            <div class="parallax-overlay-text">
-                <p class="text">
-                    <span class="capital-letter">L</span>orem ipsum dolor sit, amet consectetur adipisicing
-                    elit.
-                    Voluptatum consequatur suscipit quos
-                    dignissimos temporibus laudantium laborum saepe.
-                    Repellendus voluptatem, eius rem dolor sint illo quos quam quidem assumenda in? Quia pariatur
-                    et
-                    quae esse dolores voluptates officia in ad eveniet. Ipsum, voluptatum vel! Nihil praesentium
-                    soluta
-                    laudantium modi consequatur dolorem voluptate recusandae temporibus dignissimos labore!
-                </p>
-            </div>
-        </div>
+
     </div>
 
     <div class="parallax-img-2">
@@ -149,29 +147,37 @@
         </div>
     </div>
 
-    <div class="divider"></div>
+
 
     <div class="container-fluid text-block">
-        <h2 class="text-block-title contact">Contact us</h2>
-        <p class="text-block-description"> Voluptatum consequatur suscipit quos.
-            Repellendus voluptatem. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus esse
-            laborum quam autem quae fuga voluptatum repellendus dolorum iure quod?
-            laudantium modi consequatur dolorem voluptate recusandae temporibus dignissimos labore!
-        </p>
+        <div class="row">
+            <div class="divider"></div>
+            <h2 class="text-block-title-contact">Contact us</h2>
+        </div>
+        <h3 class="vertical-heading-contact">Contact.</h3>
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-6">
+                <p class="text-block-description contact"><span class="capital-letter">V</span>oluptatum consequatur suscipit quos.
+                    Repellendus voluptatem. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus esse
+                    laborum quam autem quae fuga voluptatum repellendus dolorum iure quod?
+                    laudantium modi consequatur dolorem voluptate recusandae temporibus dignissimos labore!
+                </p>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-6">
+                <form action="#">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" class="form-control">
+                    <label for="phone">Phone</label>
+                    <input type="number" id="phone" class="form-control">
+                    <label for="email">Email</label>
+                    <input type="text" id="email" class="form-control">
+                    <label for="travel">Where do you want to travel?</label>
+                    <input type="text" id="travel" class="form-control" style="height:100px;">
+                    <input type="submit" value="Send">
+                </form>
+            </div>
+        </div>
 
-        <h3 class="vertical-heading contact">Contact.</h3>
-
-        <form action="#">
-            <label for="name">Name</label>
-            <input type="text" id="name" class="form-control">
-            <label for="phone">Phone</label>
-            <input type="number" id="phone" class="form-control">
-            <label for="email">Email</label>
-            <input type="text" id="email" class="form-control">
-            <label for="travel">Where do you want to travel?</label>
-            <input type="text" id="travel" class="form-control" style="height:100px;">
-            <input type="submit" value="Send">
-        </form>
 
     </div>
 

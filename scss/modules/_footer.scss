@@ -7,5 +7,11 @@
         font-size: 1rem;
         text-align: center;
         margin: auto;
+
+        @include desktop-small {
+            font-size: 1.5rem;
+        }
     }
+
+    
 }
