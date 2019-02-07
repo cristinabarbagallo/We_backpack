@@ -53,7 +53,11 @@ main {
         @include desktop-small {
             height: 100vh;
             position: relative;
+        }
 
+        @include desktop-large {
+            height: 100vh;
+            position: relative;
         }
 
         img {
@@ -74,13 +78,25 @@ main {
             height: 500px;
             padding: 20px;
         }
+
+        @include desktop-large {
+            border: 35px solid $secondaryBlue;
+            border-radius: 10px;
+            position: absolute;
+            margin: -50% 15%;
+            background: #fff;
+            width: 1000px;
+            height: 500px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
     }
 
     .lg-heading {
         font-family: $fontTitle;
         color: $primary;
         font-size: 2.5rem;
-        margin: 2em 3rem 0 3rem;
+        margin: 1.5em 3rem 0 3rem;
         border-bottom: $secondaryBlue solid 3px;
         padding-bottom: 0.5rem;
 
@@ -94,6 +110,14 @@ main {
             font-size: 4rem;
             margin: 1.5rem 0;
             text-align: center;
+        }
+
+        @include desktop-large {
+            border-bottom: none;
+            font-size: 5rem;
+            margin: 1.5rem 0;
+            text-align: center;
+            padding-bottom: 0;
         }
 
     }
@@ -114,12 +138,30 @@ main {
         @include desktop-small {
             display: none;
         }
+
+        @include desktop-large {
+            display: none;
+        }
     }
 
     .desktop-card-text {
         padding: 0 60px;
         font-size: 16px;
         line-height: 1.3;
+
+        @include tablet {
+            font-size: 1.3rem;
+            padding: 0 6rem;
+        }
+
+        @include desktop-small {
+            font-size: 1.3rem;
+        }
+
+        @include desktop-large {
+            font-size: 1.5rem;
+            padding: 0 60px 30px;
+        }
         
 
         .capital-letter {

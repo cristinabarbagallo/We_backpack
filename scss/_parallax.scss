@@ -106,7 +106,8 @@
                 display: flex;
                 flex-direction: column;
                 align-self: flex-end;
-                border-radius: 10px;
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
                 margin-top: 12em;
                 padding: 1rem 2rem;
             }
@@ -124,7 +125,7 @@
                 }
 
                 @include desktop-small {
-                    font-size: 1.5em;
+                    font-size: 1.3em;
                 }
             }
         }
@@ -293,7 +294,7 @@
     }
 
     .text-block-title-contact {
-            margin: 0;
+            margin: auto;
             font-size: 35px;
             font-family: $fontTitle;
             color: $primary;
@@ -309,7 +310,7 @@
                 width: 100%;
                 text-align: center;
                 font-size: 50px;
-                padding-bottom: 1rem;
+                padding-bottom: 1.5rem;
                 padding-top: 2em;
             }
 
@@ -345,15 +346,18 @@
     .text-block-description.contact {
         margin-top: 2em;
         margin-left: 2rem;
-        padding: 1rem 3em;
+        padding: 1rem 3rem;
 
         @include tablet {
-            padding: 1rem 3.5rem;
+            margin: 1rem 3rem;
         }
 
         @include desktop-small  {
-            padding: 1rem 4rem;
-            margin-top: 4em;
+            padding-top: 3.5rem;
+            padding-right: 7rem;
+            padding-left: 5rem;
+            
+            
         }
 
         .capital-letter {
@@ -363,11 +367,12 @@
 
     form {
         display: block;
-        text-align: center;
         padding: 0 5rem;
+        text-align: center;
 
         @include tablet {
-            padding: 2.5rem 5rem;
+            margin: 2.5rem 5.5rem;
+            padding: 0;
         }
 
         @include desktop-small {
@@ -378,6 +383,7 @@
             float: left;
             margin-top: 0.8rem;
             font-size: 22px;
+            text-align: left;
         }
 
         input[type="submit"] {
@@ -386,6 +392,19 @@
             border-radius: 20px;
             margin-top: 0.5rem;
             padding: 3px 25px;
+
+            @include tablet  {
+                padding: 10px 30px;
+                border-radius: 10px;
+                font-size: 20px;
+            }
+
+            @include desktop-small {
+                padding: 10px 30px;
+                border-radius: 10px;
+                font-size: 18px;
+            }
+           
         }
 
     }
