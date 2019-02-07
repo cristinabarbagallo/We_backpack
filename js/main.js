@@ -58,3 +58,12 @@ $(function () {
     return false;
   });
 });
+
+
+//--- Fade in Text when scrollling down
+
+$(window).scroll(function(){
+  var top = ($(window).scrollTop() > 0) ? $(window).scrollTop() : 1;
+  $('.fade').stop(true, true).fadeTo(0, 1 / top);
+  $('.fade').css('top', top * 1.3);             
+});

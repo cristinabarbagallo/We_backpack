@@ -2,7 +2,7 @@
 
 //Menu Button
 .menu-btn {
-    position: absolute;
+    position: fixed;
     display: inline-block;
     cursor: pointer;
     z-index: 1000;
@@ -13,7 +13,7 @@
     .btn-line {
         width: 35px;
         height: 5px;
-        background-color: #333;
+        background-color: #252525;
         margin: 5px 0;
         border-radius: 2px;
         @include easeOut;
@@ -24,11 +24,26 @@
             margin: 8px 0;
             border-radius: 2px;
         }
+
+        @include desktop-small {
+            width: 50px;
+            height: 8px;
+            margin: 10px 0;
+            border-radius: 2px;
+        }
+
+        @include desktop-small {
+            width: 50px;
+            height: 8px;
+            margin: 10px 0;
+            border-radius: 2px;
+        }
     }
 
     //Rotate Into X 
     &.close {
         transform: rotate(180deg);
+        opacity: 1;
 
         .btn-line {
 
@@ -40,6 +55,11 @@
                 @include tablet {
                     -webkit-transform: rotate(-45deg) translate(-15px, 15px);
                     transform: rotate(-45deg) translate(-15px, 15px);
+                }
+
+                @include desktop-small {
+                    -webkit-transform: rotate(-45deg) translate(-15px, 15px);
+                    transform: rotate(-45deg) translate(-18px, 17px);
                 }
             }
 
@@ -54,7 +74,14 @@
                 transform: rotate(45deg) translate(-9px, -7px);
             }
         }
+
+        // &::before {
+        //     content: 'close';
+        //     transform: rotate(-180deg);
+
+        // }
     }
+
 }
 
 //Menu Overlay
@@ -75,6 +102,14 @@
 
     @include tablet{
         width: 50%;
+    }
+
+    @include desktop-small {
+        width: 30%;
+    }
+
+    @include desktop-large {
+        width: 30%;
     }
 
     &.show {

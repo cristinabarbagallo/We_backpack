@@ -1,4 +1,5 @@
-// Go Back to Top Button
+//---- Go Back to Top Button ----//
+
 #myBtn {
     display: none;
     position: fixed;
@@ -13,13 +14,21 @@
     padding: 10px 13px;
     border-radius: 2px;
     font-size: 1rem;
+    text-transform: uppercase;
+
+    @include desktop-large {
+        bottom: 120px;
+        padding: 20px 35px;
+        font-size: 1.5rem;
+    }
 }
 
 .fa-long-arrow-alt-up {
     padding-left: 5px;
 }
 
-//Scroll down Button
+//---- Scroll down Button ----//
+
 @keyframes bounce {
 
     0%,
@@ -60,6 +69,14 @@
 
     i {
         color: $primary;
+    }
+
+    @include desktop-small {
+        font-size: 5em;
+    }
+
+    @include desktop-large {
+        font-size: 6em;
     }
 
 }
