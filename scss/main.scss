@@ -8,6 +8,7 @@
 
 
 * {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -35,7 +36,9 @@ a {
     margin: 0;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     color: $primary;
 }
 
@@ -43,8 +46,14 @@ main {
     height: 100vh;
 
     @include desktop-small {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
         position: relative;
         z-index: 1;
@@ -60,14 +69,20 @@ main {
             background-image: url('../img/bakgrund_index.jpg');
             background-repeat: no-repeat;
             background-size: cover;
-            background-position: center; 
+            background-position: center;
             opacity: 0.6;
         }
     }
 
     @include desktop-large {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
         position: relative;
         z-index: 1;
@@ -84,22 +99,21 @@ main {
             background-repeat: no-repeat;
             background-size: cover;
             opacity: 0.6;
-            }
+        }
 
-        
+
     }
 
     .hero-image {
         height: 40vh;
         width: 100%;
+        -o-object-fit: cover;
         object-fit: cover;
         opacity: 0.6;
         filter: alpha(opacity=60);
         /* For IE8 and earlier */
 
         @include desktop-small {
-            // height: 100vh;
-            // position: relative;
             display: none;
         }
 
@@ -119,18 +133,18 @@ main {
             border: 25px solid $secondaryBlue;
             border-radius: 5px;
             background: #fff;
-            width: 800px;
-            height: 500px;
+            width: 700px;
+            height: 400px;
             padding: 20px;
-        
+
         }
 
         @include desktop-large {
-            border: 35px solid $secondaryBlue;
+            border: 25px solid $secondaryBlue;
             border-radius: 10px;
             background: #fff;
-            width: 1000px;
-            height: 500px;
+            width: 800px;
+            height: 400px;
             padding: 20px;
         }
     }
@@ -146,18 +160,19 @@ main {
         @include tablet {
             font-size: 3em;
             margin-left: 6rem;
+            margin-top: 1em;
         }
 
         @include desktop-small {
             border-bottom: none;
-            font-size: 4rem;
-            margin: 1.5rem 0;
+            font-size: 3rem;
+            margin: 1rem 0;
             text-align: center;
         }
 
         @include desktop-large {
             border-bottom: none;
-            font-size: 5rem;
+            font-size: 3.5rem;
             margin: 1.5rem 0;
             text-align: center;
             padding-bottom: 0;
@@ -166,7 +181,12 @@ main {
     }
 
     .sm-heading {
+        position: absolute;
+        -webkit-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
         transform: rotate(-90deg);
+        -webkit-transform-origin: left bottom 0;
+        -ms-transform-origin: left bottom 0;
         transform-origin: left bottom 0;
         margin-top: 4rem;
         margin-left: 1.8rem;
@@ -176,6 +196,8 @@ main {
 
         @include tablet {
             font-size: 35px;
+            margin-top: 4em;
+            margin-left: 2rem;
         }
 
         @include desktop-small {
@@ -189,23 +211,24 @@ main {
 
     .desktop-card-text {
         padding: 0 60px;
-        font-size: 16px;
+        font-size: 1.2rem;
         line-height: 1.3;
 
         @include tablet {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             padding: 0 6rem;
+            margin-top: 1rem;
+            line-height: 1.2;
         }
 
         @include desktop-small {
-            font-size: 1.3rem;
+            padding: 0 40px;
         }
 
         @include desktop-large {
-            font-size: 1.5rem;
             padding: 0 60px 30px;
         }
-        
+
 
         .capital-letter {
             font-size: 30px;

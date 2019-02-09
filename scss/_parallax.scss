@@ -28,6 +28,7 @@
         @include tablet {
             font-size: 30px;
             margin-left: 4rem;
+            margin-top: 12em;
         }
 
         @include desktop-small {
@@ -70,7 +71,6 @@
         @include desktop-small {
             display: flex;
         }
-
 
         .top-image {
             display: flex;
@@ -115,7 +115,7 @@
             @include tablet {
                 text-align: right;
                 font-size: 25px;
-                margin-bottom: 1.5rem;
+                margin: 1.5rem auto;
             }
 
             @include desktop-small {
@@ -125,7 +125,9 @@
             }
 
             @include desktop-large {
-                font-size: 40px;
+                margin-top: -3em;
+                font-size: 1.2rem;
+                padding: auto;
             }
         }
 
@@ -146,9 +148,10 @@
             background-color: #fff;
             padding: 1rem 2.5rem;
             margin-top: 130px;
+            height: auto;
 
             @include tablet {
-                padding: 0.5rem 0;
+                padding: 1.5rem 0;
                 margin-bottom: -4rem;
             }
 
@@ -165,7 +168,8 @@
             @include desktop-large {
                 border-top-left-radius: 15px;
                 border-bottom-left-radius: 15px;
-                margin-top: 15%;
+                margin: auto;
+                height: 20%;
             }
 
             .text {
@@ -185,7 +189,7 @@
                 }
 
                 @include desktop-large {
-                    font-size: 1.5em;
+                    font-size: 1.2em;
                 }
             }
 
