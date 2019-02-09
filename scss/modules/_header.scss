@@ -48,9 +48,15 @@ header {
 
     .social-links {
         margin-top: 8rem;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
-        align-items: flex-end;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: end;
+            -ms-flex-align: end;
+                align-items: flex-end;
 
         @include tablet {
             font-size: 1.5rem;
@@ -79,7 +85,8 @@ header {
         float: right;
         height: 80px;
         width: 80px;
-        object-fit: contain;
+        -o-object-fit: contain;
+           object-fit: contain;
         top: 10px;
         right: 20px;
 
