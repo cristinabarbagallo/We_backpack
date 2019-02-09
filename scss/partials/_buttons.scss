@@ -61,10 +61,12 @@
     font-size: 50px;
     z-index: 99;
     -webkit-transition: all .5s ease-in 3s;
+    -o-transition: all .5s ease-in 3s;
     transition: all .5s ease-in 3s;
     -webkit-animation: bounce 2s infinite 2s;
     animation: bounce 2s infinite 2s;
     -webkit-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
     transition: all .2s ease-in;
 
     i {
