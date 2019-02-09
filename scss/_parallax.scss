@@ -18,11 +18,11 @@
 
     .sm-heading-two {
         -webkit-transform: rotate(-90deg);
-            -ms-transform: rotate(-90deg);
-                transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        transform: rotate(-90deg);
         -webkit-transform-origin: left bottom 0;
-            -ms-transform-origin: left bottom 0;
-                transform-origin: left bottom 0;
+        -ms-transform-origin: left bottom 0;
+        transform-origin: left bottom 0;
         font-size: 25px;
         z-index: 2;
         margin-left: 2.5rem;
@@ -44,7 +44,7 @@
         @include desktop-large {
             font-size: 45px;
             margin-left: 4.5rem;
-            
+
         }
 
     }
@@ -71,7 +71,7 @@
     }
 
     .container-fluid.section-one {
-        
+
         @include desktop-small {
             display: -webkit-box;
             display: -ms-flexbox;
@@ -84,10 +84,10 @@
             display: flex;
             -webkit-box-orient: vertical;
             -webkit-box-direction: normal;
-                -ms-flex-direction: column;
-                    flex-direction: column;
+            -ms-flex-direction: column;
+            flex-direction: column;
             -o-object-fit: cover;
-               object-fit: cover;
+            object-fit: cover;
             height: 300px;
 
             img {
@@ -95,23 +95,50 @@
                 width: 100%;
             }
 
-        
-            #map-img {-webkit-box-ordinal-group: 2;-ms-flex-order: 1;order: 1;}
-            #map-title {-webkit-box-ordinal-group: 3;-ms-flex-order: 2;order: 2;}
+
+            #map-img {
+                -webkit-box-ordinal-group: 2;
+                -ms-flex-order: 1;
+                order: 1;
+            }
+
+            #map-title {
+                -webkit-box-ordinal-group: 3;
+                -ms-flex-order: 2;
+                order: 2;
+            }
 
             @include desktop-small {
                 height: 350px;
 
-                #map-img {-webkit-box-ordinal-group: 3;-ms-flex-order: 2;order: 2;}
-                #map-title {-webkit-box-ordinal-group: 2;-ms-flex-order: 1;order: 1;}
+                #map-img {
+                    -webkit-box-ordinal-group: 3;
+                    -ms-flex-order: 2;
+                    order: 2;
+                }
+
+                #map-title {
+                    -webkit-box-ordinal-group: 2;
+                    -ms-flex-order: 1;
+                    order: 1;
+                }
             }
 
             @include desktop-large {
                 margin-top: 15%;
                 height: 500px;
 
-                #map-img {-webkit-box-ordinal-group: 3;-ms-flex-order: 2;order: 2;}
-                #map-title {-webkit-box-ordinal-group: 2;-ms-flex-order: 1;order: 1;}
+                #map-img {
+                    -webkit-box-ordinal-group: 3;
+                    -ms-flex-order: 2;
+                    order: 2;
+                }
+
+                #map-title {
+                    -webkit-box-ordinal-group: 2;
+                    -ms-flex-order: 1;
+                    order: 1;
+                }
             }
         }
 
@@ -122,7 +149,7 @@
             height: auto;
             width: 50%;
             text-align: right;
-            
+
 
             @include tablet {
                 text-align: right;
@@ -147,16 +174,16 @@
         #fadeIn {
             display: block;
             opacity: 0;
-            
+
 
             &.active {
                 opacity: 1;
                 -webkit-transition-duration: 2000ms;
-                     -o-transition-duration: 2000ms;
-                        transition-duration: 2000ms;
+                -o-transition-duration: 2000ms;
+                transition-duration: 2000ms;
             }
         }
-        
+
 
         .parallax-overlay-text {
             background-color: #fff;
@@ -175,10 +202,10 @@
                 display: flex;
                 -webkit-box-orient: vertical;
                 -webkit-box-direction: normal;
-                    -ms-flex-direction: column;
-                        flex-direction: column;
+                -ms-flex-direction: column;
+                flex-direction: column;
                 -ms-flex-item-align: end;
-                    align-self: flex-end;
+                align-self: flex-end;
                 border-top-left-radius: 10px;
                 border-bottom-left-radius: 10px;
                 margin-top: 12em;
@@ -193,7 +220,7 @@
             }
 
             .text {
-                
+
                 .capital-letter {
                     font-size: 30px;
                 }
@@ -256,7 +283,7 @@
         @include desktop-large {
             font-size: 2.5em;
             font-weight: bold;
-            
+
         }
     }
 }
@@ -292,7 +319,7 @@
                 padding-top: 1.5rem;
             }
 
-            @include desktop-large  {
+            @include desktop-large {
                 font-size: 3rem;
                 width: 800px;
                 margin: auto;
@@ -317,7 +344,7 @@
                 font-size: 1.2rem;
             }
 
-            @include desktop-large  {
+            @include desktop-large {
                 font-size: 1.5rem;
                 width: 800px;
                 margin: auto;
@@ -327,11 +354,11 @@
 
         .vertical-heading-text-block {
             -webkit-transform: rotate(-90deg);
-                -ms-transform: rotate(-90deg);
-                    transform: rotate(-90deg);
+            -ms-transform: rotate(-90deg);
+            transform: rotate(-90deg);
             -webkit-transform-origin: left bottom 0;
-                -ms-transform-origin: left bottom 0;
-                    transform-origin: left bottom 0;
+            -ms-transform-origin: left bottom 0;
+            transform-origin: left bottom 0;
             font-size: 25px;
             z-index: 2;
             margin-left: 2.5rem;
@@ -359,16 +386,16 @@
         }
 
         .page-number {
-            display: none; 
-    
+            display: none;
+
             @include tablet {
                 display: none;
             }
-    
+
             @include desktop-small {
                 display: none;
             }
-    
+
             @include desktop-large {
                 display: inline-block;
                 font-family: $fontTitle;
@@ -392,7 +419,7 @@
     margin-right: 1.2rem;
     margin-top: -3rem;
     -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
 
     img {
         height: auto;
@@ -411,7 +438,7 @@
         margin-top: -4rem;
     }
 
-    @include desktop-large  {
+    @include desktop-large {
         max-width: 800px;
         margin: auto;
         margin-top: -3em;
@@ -423,7 +450,7 @@
     background-image: url('../img/bakgrund_undersida_4.jpg');
     min-height: 200px;
     -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     margin-top: 4rem;
 }
 
@@ -444,45 +471,45 @@
     }
 
     .text-block-title-contact {
+        margin: auto;
+        font-size: 35px;
+        font-family: $fontTitle;
+        color: $primary;
+        padding-top: 3rem;
+        text-align: center;
+
+        @include tablet {
             margin: auto;
-            font-size: 35px;
-            font-family: $fontTitle;
-            color: $primary;
-            padding-top: 3rem;
-            text-align: center;
-
-            @include tablet {
-                margin: auto;
-            }
-
-            @include desktop-small {
-                background-color: $secondaryBeige;
-                width: 100%;
-                text-align: center;
-                font-size: 50px;
-                padding-bottom: 1.5rem;
-                padding-top: 2em;
-            }
-
-            @include desktop-large {
-                background-color: $secondaryBeige;
-                width: 100%;
-                text-align: center;
-                font-size: 4em;
-                padding-bottom: 1.5rem;
-                padding-top: 2em;
-            }
-
         }
+
+        @include desktop-small {
+            background-color: $secondaryBeige;
+            width: 100%;
+            text-align: center;
+            font-size: 50px;
+            padding-bottom: 1.5rem;
+            padding-top: 2em;
+        }
+
+        @include desktop-large {
+            background-color: $secondaryBeige;
+            width: 100%;
+            text-align: center;
+            font-size: 4em;
+            padding-bottom: 1.5rem;
+            padding-top: 2em;
+        }
+
+    }
 
 
     .vertical-heading-contact {
         -webkit-transform: rotate(-90deg);
-            -ms-transform: rotate(-90deg);
-                transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        transform: rotate(-90deg);
         -webkit-transform-origin: left bottom 0;
-            -ms-transform-origin: left bottom 0;
-                transform-origin: left bottom 0;
+        -ms-transform-origin: left bottom 0;
+        transform-origin: left bottom 0;
         font-size: 25px;
         z-index: 2;
         margin-left: 2.5rem;
@@ -513,7 +540,7 @@
     }
 
     .page-number {
-        display: none; 
+        display: none;
 
         @include tablet {
             display: none;
@@ -544,10 +571,10 @@
             margin: 1rem 3rem;
         }
 
-        @include desktop-small  {
+        @include desktop-small {
             padding-top: 3.5rem;
             padding-right: 7rem;
-            padding-left: 5rem; 
+            padding-left: 5rem;
         }
 
         @include desktop-large {
@@ -582,7 +609,7 @@
 
         @include desktop-large {
             margin-top: 3em;
-        } 
+        }
 
 
         label {
@@ -604,7 +631,7 @@
             margin-top: 0.5rem;
             padding: 3px 25px;
 
-            @include tablet  {
+            @include tablet {
                 padding: 10px 30px;
                 border-radius: 10px;
                 font-size: 20px;
@@ -621,9 +648,8 @@
                 border-radius: 10px;
                 font-size: 20px;
             }
-           
+
         }
 
     }
 }
-
