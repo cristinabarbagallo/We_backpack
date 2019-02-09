@@ -17,8 +17,12 @@
     height: 100vh;
 
     .sm-heading-two {
-        transform: rotate(-90deg);
-        transform-origin: left bottom 0;
+        -webkit-transform: rotate(-90deg);
+            -ms-transform: rotate(-90deg);
+                transform: rotate(-90deg);
+        -webkit-transform-origin: left bottom 0;
+            -ms-transform-origin: left bottom 0;
+                transform-origin: left bottom 0;
         font-size: 25px;
         z-index: 2;
         margin-left: 2.5rem;
@@ -69,13 +73,21 @@
     .container-fluid.section-one {
         
         @include desktop-small {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
         }
 
         .top-image {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-direction: column;
-            object-fit: cover;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            -o-object-fit: cover;
+               object-fit: cover;
             height: 300px;
 
             img {
@@ -84,22 +96,22 @@
             }
 
         
-            #map-img {order: 1;}
-            #map-title {order: 2;}
+            #map-img {-webkit-box-ordinal-group: 2;-ms-flex-order: 1;order: 1;}
+            #map-title {-webkit-box-ordinal-group: 3;-ms-flex-order: 2;order: 2;}
 
             @include desktop-small {
                 height: 350px;
 
-                #map-img {order: 2;}
-                #map-title {order: 1;}
+                #map-img {-webkit-box-ordinal-group: 3;-ms-flex-order: 2;order: 2;}
+                #map-title {-webkit-box-ordinal-group: 2;-ms-flex-order: 1;order: 1;}
             }
 
             @include desktop-large {
                 margin-top: 15%;
                 height: 500px;
 
-                #map-img {order: 2;}
-                #map-title {order: 1;}
+                #map-img {-webkit-box-ordinal-group: 3;-ms-flex-order: 2;order: 2;}
+                #map-title {-webkit-box-ordinal-group: 2;-ms-flex-order: 1;order: 1;}
             }
         }
 
@@ -139,7 +151,9 @@
 
             &.active {
                 opacity: 1;
-                transition-duration: 2000ms;
+                -webkit-transition-duration: 2000ms;
+                     -o-transition-duration: 2000ms;
+                        transition-duration: 2000ms;
             }
         }
         
@@ -156,9 +170,15 @@
             }
 
             @include desktop-small {
+                display: -webkit-box;
+                display: -ms-flexbox;
                 display: flex;
-                flex-direction: column;
-                align-self: flex-end;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
+                        flex-direction: column;
+                -ms-flex-item-align: end;
+                    align-self: flex-end;
                 border-top-left-radius: 10px;
                 border-bottom-left-radius: 10px;
                 margin-top: 12em;
@@ -306,8 +326,12 @@
         }
 
         .vertical-heading-text-block {
-            transform: rotate(-90deg);
-            transform-origin: left bottom 0;
+            -webkit-transform: rotate(-90deg);
+                -ms-transform: rotate(-90deg);
+                    transform: rotate(-90deg);
+            -webkit-transform-origin: left bottom 0;
+                -ms-transform-origin: left bottom 0;
+                    transform-origin: left bottom 0;
             font-size: 25px;
             z-index: 2;
             margin-left: 2.5rem;
@@ -367,7 +391,8 @@
     margin-left: 5rem;
     margin-right: 1.2rem;
     margin-top: -3rem;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 
     img {
         height: auto;
@@ -397,7 +422,8 @@
 .parallax-img-5 {
     background-image: url('../img/bakgrund_undersida_4.jpg');
     min-height: 200px;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     margin-top: 4rem;
 }
 
@@ -451,8 +477,12 @@
 
 
     .vertical-heading-contact {
-        transform: rotate(-90deg);
-        transform-origin: left bottom 0;
+        -webkit-transform: rotate(-90deg);
+            -ms-transform: rotate(-90deg);
+                transform: rotate(-90deg);
+        -webkit-transform-origin: left bottom 0;
+            -ms-transform-origin: left bottom 0;
+                transform-origin: left bottom 0;
         font-size: 25px;
         z-index: 2;
         margin-left: 2.5rem;
@@ -596,5 +626,4 @@
 
     }
 }
-
 
