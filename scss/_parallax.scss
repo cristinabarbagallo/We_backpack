@@ -322,7 +322,7 @@
             @include desktop-large {
                 font-size: 3rem;
                 width: 800px;
-                margin: auto;
+                margin: 2rem auto 0;
                 line-height: 1.5;
             }
         }
@@ -402,7 +402,7 @@
                 font-size: 12em;
                 color: $secondaryBlue;
                 z-index: 2;
-                position: relative;
+                position: absolute;
                 margin-left: 6.5rem;
                 margin-top: 0;
             }
