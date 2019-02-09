@@ -42,7 +42,9 @@
 
     //Rotate Into X 
     &.close {
-        transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+                transform: rotate(180deg);
         opacity: 1;
 
         .btn-line {
@@ -50,16 +52,19 @@
             //line 1 - Rotate
             &:nth-child(1) {
                 -webkit-transform: rotate(-45deg) translate(-8px, 5px);
-                transform: rotate(-45deg) translate(-8px, 5px);
+                -ms-transform: rotate(-45deg) translate(-8px, 5px);
+                    transform: rotate(-45deg) translate(-8px, 5px);
 
                 @include tablet {
                     -webkit-transform: rotate(-45deg) translate(-15px, 15px);
-                    transform: rotate(-45deg) translate(-15px, 15px);
+                    -ms-transform: rotate(-45deg) translate(-15px, 15px);
+                        transform: rotate(-45deg) translate(-15px, 15px);
                 }
 
                 @include desktop-small {
                     -webkit-transform: rotate(-45deg) translate(-15px, 15px);
-                    transform: rotate(-45deg) translate(-18px, 17px);
+                    -ms-transform: rotate(-45deg) translate(-18px, 17px);
+                        transform: rotate(-45deg) translate(-18px, 17px);
                 }
             }
 
@@ -71,15 +76,10 @@
             //Line 3 - Rotate
             &:nth-child(3) {
                 -webkit-transform: rotate(45deg) translate(-9px, -7px);
-                transform: rotate(45deg) translate(-9px, -7px);
+                -ms-transform: rotate(45deg) translate(-9px, -7px);
+                    transform: rotate(45deg) translate(-9px, -7px);
             }
         }
-
-        // &::before {
-        //     content: 'close';
-        //     transform: rotate(-180deg);
-
-        // }
     }
 
 }
@@ -94,9 +94,9 @@
     visibility: hidden;
     background: #fff;
     height: 100vh;
-    transform: translate3d(-100%, 0, 0);
+    -webkit-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0);
     -webkit-box-shadow: 7px 0px 29px -6px rgba(0,0,0,0.49);
-    -moz-box-shadow: 7px 0px 29px -6px rgba(0,0,0,0.49);
     box-shadow: 7px 0px 29px -6px rgba(0,0,0,0.49);
     @include easeOut;
 
@@ -114,7 +114,8 @@
 
     &.show {
         visibility: visible;
-        transform: translate3d(0, 0, 0);
+        -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
     }
 
 }
